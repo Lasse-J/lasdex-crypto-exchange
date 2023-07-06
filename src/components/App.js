@@ -6,21 +6,50 @@ import {
   loadProvider,
   loadNetwork,
   loadAccount,
-  loadToken
+  loadTokens,
+  loadExchange
 } from '../store/interactions';
 
 function App() {
   const dispatch = useDispatch()
 
   const loadBlockchainData = async () => {
-    await loadAccount(dispatch)
-
     // Connect Ethers to blockchain (the connection to blockchain)
     const provider = loadProvider(dispatch)
+
+    // Fetch current network's chainId (e.g. hardhat: 31337, goerli: 5)
     const chainId = await loadNetwork(provider, dispatch)
 
-    // Token Smart Contract
-    await loadToken(provider, config[chainId].LDX.address, dispatch)
+    // Fetch current account & balance from MetaMark
+    await loadAccount(provider, dispatch)
+
+    // Load Token Smart Contract
+    const LDX = config[chainId].LDX
+    const mwETH = config[chainId].mwETH
+    const mDAI = config[chainId].mDAI
+    const mUSDT = config[chainId].mUSDT
+    const mwBTC = config[chainId].mwBTC
+    const mUSDC = config[chainId].mUSDC
+    const mBNB = config[chainId].mBNB
+    const mTRX = config[chainId].mTRX
+    const mMATIC = config[chainId].mMATIC
+    await loadTokens(
+      provider,
+      [LDX.address,
+      mwETH.address,
+      mDAI.address,
+      mUSDT.address,
+      mwBTC.address,
+      mUSDC.address,
+      mBNB.address,
+      mTRX.address,
+      mMATIC.address],
+      dispatch)
+
+    // Load Exchange Smart Contract
+    const exchangeConfig = config[chainId].exchange
+    await loadExchange(provider, exchangeConfig.address, dispatch)
+
   }
 
   useEffect(() => {
