@@ -38,59 +38,10 @@ export const tokens = (state = DEFAULT_TOKENS_STATE, action) => {
       return {
         ...state,
         loaded: true,
-        contracts: [...state.contracts, action.token],
-        symbols: [...state.symbols, action.symbol]
+        contracts: [action.token],
+        symbols: [action.symbol]
       }
     case 'TOKEN_2_LOADED':
-      return {
-        ...state,
-        loaded: true,
-        contracts: [...state.contracts, action.token],
-        symbols: [...state.symbols, action.symbol]
-      }
-    case 'TOKEN_3_LOADED':
-      return {
-        ...state,
-        loaded: true,
-        contracts: [...state.contracts, action.token],
-        symbols: [...state.symbols, action.symbol]
-      }
-    case 'TOKEN_4_LOADED':
-      return {
-        ...state,
-        loaded: true,
-        contracts: [...state.contracts, action.token],
-        symbols: [...state.symbols, action.symbol]
-      }
-    case 'TOKEN_5_LOADED':
-      return {
-        ...state,
-        loaded: true,
-        contracts: [...state.contracts, action.token],
-        symbols: [...state.symbols, action.symbol]
-      }
-    case 'TOKEN_6_LOADED':
-      return {
-        ...state,
-        loaded: true,
-        contracts: [...state.contracts, action.token],
-        symbols: [...state.symbols, action.symbol]
-      }
-    case 'TOKEN_7_LOADED':
-      return {
-        ...state,
-        loaded: true,
-        contracts: [...state.contracts, action.token],
-        symbols: [...state.symbols, action.symbol]
-      }
-    case 'TOKEN_8_LOADED':
-      return {
-        ...state,
-        loaded: true,
-        contracts: [...state.contracts, action.token],
-        symbols: [...state.symbols, action.symbol]
-      }
-    case 'TOKEN_9_LOADED':
       return {
         ...state,
         loaded: true,
