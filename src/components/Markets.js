@@ -22,16 +22,16 @@ const Markets = () => {
 
       {chainId && config[chainId] ? (
       <select name="markets" id="markets" onChange={marketHandler}>
-      	<option value={`${config[chainId].LDX.address},${config[chainId].mUSDT.address}`}>LDX / USDT</option>
-      	<option value={`${config[chainId].mwETH.address},${config[chainId].mUSDT.address}`}>wETH / USDT</option>
-      	<option value={`${config[chainId].mDAI.address},${config[chainId].mUSDT.address}`}>DAI / USDT</option>
-      	<option value={`${config[chainId].mwBTC.address},${config[chainId].mUSDT.address}`}>wBTC / USDT</option>
-      	<option value={`${config[chainId].mUSDC.address},${config[chainId].mUSDT.address}`}>USDC / USDT</option>
-      	<option value={`${config[chainId].mBNB.address},${config[chainId].mUSDT.address}`}>BNB / USDT</option>
-      	<option value={`${config[chainId].mTRX.address},${config[chainId].mUSDT.address}`}>TRX / USDT</option>
-      	<option value={`${config[chainId].mMATIC.address},${config[chainId].mUSDT.address}`}>MATIC / USDT</option>
-      	<option value={`${config[chainId].LDX.address},${config[chainId].mwETH.address}`}>LDX / wETH</option>
-      	<option value={`${config[chainId].LDX.address},${config[chainId].mwBTC.address}`}>LDX / wBTC</option>
+        <option value={`${config[chainId].LDX.address},${config[chainId].mwETH.address}`}>LDX / mwETH</option>
+      	<option value={`${config[chainId].LDX.address},${config[chainId].mUSDT.address}`}>LDX / mUSDT</option>
+        <option value={`${config[chainId].LDX.address},${config[chainId].mwBTC.address}`}>LDX / mwBTC</option>
+      	<option value={`${config[chainId].mwETH.address},${config[chainId].mUSDT.address}`}>mwETH / mUSDT</option>
+      	<option value={`${config[chainId].mDAI.address},${config[chainId].mUSDT.address}`}>mDAI / mUSDT</option>
+      	<option value={`${config[chainId].mwBTC.address},${config[chainId].mUSDT.address}`}>mwBTC / mUSDT</option>
+      	<option value={`${config[chainId].mUSDC.address},${config[chainId].mUSDT.address}`}>mUSDC / mUSDT</option>
+      	<option value={`${config[chainId].mBNB.address},${config[chainId].mUSDT.address}`}>mBNB / mUSDT</option>
+      	<option value={`${config[chainId].mTRX.address},${config[chainId].mUSDT.address}`}>mTRX / mUSDT</option>
+      	<option value={`${config[chainId].mMATIC.address},${config[chainId].mUSDT.address}`}>mMATIC / mUSDT</option>
       </select>
       ) : (
       	<div>
