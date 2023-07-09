@@ -240,8 +240,8 @@ small {
 /* MARKET COMPONENT */
 
 .exchange__markets,
-.exchange__transfers,
-.exchange__orders {
+.exchange__orders,
+.exchange__transfers {
   grid-column-start: 2;
   grid-column-end: 12;
 }
@@ -641,8 +641,8 @@ table td {
 @media screen and (min-width: 576px) {
 
   .exchange__markets,
-  .exchange__transfers,
-  .exchange__orders {
+  .exchange__orders,
+  .exchange__transfers {
     grid-column-start: 3;
     grid-column-end: 11;
   }
@@ -758,8 +758,8 @@ table td {
   }
 
   .exchange__markets,
-  .exchange__transfers,
-  .exchange__orders {
+  .exchange__orders,
+  .exchange__transfers {
     grid-column-start: 1;
     grid-column-end: 13;
   }
@@ -768,11 +768,11 @@ table td {
     grid-row: 1;
   }
 
-  .exchange__transfers {
+  .exchange__orders {
     grid-row: 2;
   }
 
-  .exchange__orders {
+  .exchange__transfers {
     grid-row: 3;
   }
 }

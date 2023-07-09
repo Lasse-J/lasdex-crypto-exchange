@@ -13,6 +13,7 @@ import {
 
 import Navbar from './Navbar'
 import Markets from './Markets'
+import Order from './Order'
 import Balance from './Balance'
 
 function App() {
@@ -80,9 +81,9 @@ function App() {
 
           <Markets />
 
-          <Balance />
+          <Order />
 
-          {/* Order */}
+          <Balance />
 
         </section>
         <section className='exchange__section--right grid'>
