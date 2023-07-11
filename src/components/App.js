@@ -17,6 +17,8 @@ import Markets from './Markets'
 import Order from './Order'
 import Balance from './Balance'
 import PriceChart from './PriceChart'
+import Transactions from './Transactions'
+import Trades from './Trades'
 import OrderBook from './OrderBook'
 
 function App() {
@@ -96,9 +98,9 @@ function App() {
 
           <PriceChart />
 
-          {/* Transactions */}
+          <Transactions />
 
-          {/* Trades */}
+          <Trades />
 
           <OrderBook />
 

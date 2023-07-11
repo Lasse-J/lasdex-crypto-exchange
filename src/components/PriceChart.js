@@ -5,7 +5,7 @@ import Chart from 'react-apexcharts';
 import arrowDown from '../assets/down-arrow.svg';
 import arrowUp from '../assets/up-arrow.svg';
 
-import { options, defaultSeries } from './PriceChart.config.js';
+import { options, defaultSeries } from './PriceChart.config';
 
 import { priceChartSelector } from '../store/selectors';
 
@@ -24,16 +24,18 @@ const PriceChart = () => {
           <h2>{symbols && `${symbols[0]}/${symbols[1]}`}</h2>
 
           {priceChart && (
-          <div className='flex'>
 
-            {priceChart.lastPriceChange === '+' ? (
-              <img src={arrowUp} alt="Arrow up" />
-            ) : (
-              <img src={arrowDown} alt="Arrow down" />
-            )}
+            <div className='flex'>
 
-            <span className='up'>{priceChart.lastPrice}</span>
-          </div>
+              {priceChart.lastPriceChange === '+' ? (
+                <img src={arrowUp} alt="Arrow up" />
+              ): (
+                <img src={arrowDown} alt="Arrow down" />
+              )}
+
+              <span className='up'>{priceChart.lastPrice}</span>
+            </div>
+
           )}
 
         </div>
@@ -56,3 +58,4 @@ const PriceChart = () => {
 }
 
 export default PriceChart;
+ 

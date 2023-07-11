@@ -1,7 +1,9 @@
 import { useSelector } from 'react-redux'
 
+// Import assets
 import sort from '../assets/sort.svg'
 
+// Import selectors
 import { orderBookSelector } from '../store/selectors'
 
 const OrderBook = () => {
