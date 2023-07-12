@@ -58,4 +58,3 @@ const PriceChart = () => {
 }
 
 export default PriceChart;
- 

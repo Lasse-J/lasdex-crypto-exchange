@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux';
 import config from '../config.json';
 
 import {
@@ -14,12 +14,13 @@ import {
 
 import Navbar from './Navbar'
 import Markets from './Markets'
-import Order from './Order'
 import Balance from './Balance'
+import Order from './Order'
 import PriceChart from './PriceChart'
 import Transactions from './Transactions'
 import Trades from './Trades'
 import OrderBook from './OrderBook'
+import Alert from './Alert'
 
 function App() {
   const dispatch = useDispatch()
@@ -41,7 +42,7 @@ function App() {
        loadAccount(provider, dispatch)
     })
 
-    // Load Token Smart Contract
+    // Load token smart contracts
     const LDX = config[chainId].LDX
     const mwETH = config[chainId].mwETH
     const mDAI = config[chainId].mDAI
@@ -64,7 +65,7 @@ function App() {
       mMATIC.address],
       dispatch)
 
-    // Load Exchange Smart Contract
+    // Load exchange smart contract
     const exchangeConfig = config[chainId].exchange
     const exchange = await loadExchange(provider, exchangeConfig.address, dispatch)
 
@@ -107,7 +108,7 @@ function App() {
         </section>
       </main>
 
-      {/* Alert */}
+      <Alert />
 
     </div>
   );

@@ -52,7 +52,7 @@ async function main() {
   // Give tokens to account[1]
   const sender = accounts[0]
   const receiver = accounts[1]
-  let amount = tokens(10000)
+  let amount = tokens(200000)
 
   // user1 transfers 10,000 mwETH, mDAI, mUSDT, mwBTC, mUSDC, mBNB, mTRX, mMATIC to WALLET...
   let transaction, result
@@ -83,14 +83,14 @@ async function main() {
   // Set up exchange users
   const user1 = accounts[0]
   const user2 = accounts[1]
-  amount2 = tokens(5000)
+  amount2 = tokens(100000)
 
   // user1 approves LDX
   transaction = await LDX.connect(user1).approve(exchange.address, amount2)
   await transaction.wait()
   console.log(`Approved ${amount2} LDX tokens from ${user1.address}`)
 
-  // user1 deposits 5,000 LDX
+  // user1 deposits 100,000 LDX
   transaction = await exchange.connect(user1).depositToken(LDX.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} LDX tokens from ${user1.address}`)
@@ -100,7 +100,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mwETH tokens from ${user1.address}`)
 
-  // user1 deposits 5,000 mwETH
+  // user1 deposits 100,000 mwETH
   transaction = await exchange.connect(user1).depositToken(mwETH.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mwETH tokens from ${user1.address}`)
@@ -110,7 +110,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mDAI tokens from ${user1.address}`)
 
-  // user1 deposits 5,000 mDAI
+  // user1 deposits 100,000 mDAI
   transaction = await exchange.connect(user1).depositToken(mDAI.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mDAI tokens from ${user1.address}`)
@@ -120,7 +120,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mUSDT tokens from ${user1.address}`)
 
-  // user1 deposits 5,000 mUSDT
+  // user1 deposits 100,000 mUSDT
   transaction = await exchange.connect(user1).depositToken(mUSDT.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mUSDT tokens from ${user1.address}`)
@@ -130,7 +130,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mwBTC tokens from ${user1.address}`)
 
-  // user1 deposits 5,000 mwBTC
+  // user1 deposits 100,000 mwBTC
   transaction = await exchange.connect(user1).depositToken(mwBTC.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mwBTC tokens from ${user1.address}`)
@@ -140,7 +140,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mUSDC tokens from ${user1.address}`)
 
-  // user1 deposits 5,000 mUSDC
+  // user1 deposits 100,000 mUSDC
   transaction = await exchange.connect(user1).depositToken(mUSDC.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mUSDC tokens from ${user1.address}`)
@@ -150,7 +150,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mBNB tokens from ${user1.address}`)
 
-  // user1 deposits 5,000 mBNB
+  // user1 deposits 100,000 mBNB
   transaction = await exchange.connect(user1).depositToken(mBNB.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mBNB tokens from ${user1.address}`)
@@ -160,7 +160,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mTRX tokens from ${user1.address}`)
 
-  // user1 deposits 5,000 mTRX
+  // user1 deposits 100,000 mTRX
   transaction = await exchange.connect(user1).depositToken(mTRX.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mTRX tokens from ${user1.address}`)
@@ -170,7 +170,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mMATIC tokens from ${user1.address}`)
 
-  // user1 deposits 5,000 mMATIC
+  // user1 deposits 100,000 mMATIC
   transaction = await exchange.connect(user1).depositToken(mMATIC.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mMATIC tokens from ${user1.address}`)
@@ -180,7 +180,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mwETH tokens from ${user2.address}`)
 
-  // user2 deposits 5,000 mwETH
+  // user2 deposits 100,000 mwETH
   transaction = await exchange.connect(user2).depositToken(mwETH.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mwETH tokens from ${user2.address}`)
@@ -190,7 +190,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mwETH tokens from ${user2.address}`)
 
-  // user2 deposits 5,000 mwETH
+  // user2 deposits 100,000 mwETH
   transaction = await exchange.connect(user2).depositToken(mwETH.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mwETH tokens from ${user2.address}`)
@@ -200,7 +200,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mDAI tokens from ${user2.address}`)
 
-  // user2 deposits 5,000 mDAI
+  // user2 deposits 100,000 mDAI
   transaction = await exchange.connect(user2).depositToken(mDAI.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mDAI tokens from ${user2.address}`)
@@ -210,7 +210,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mUSDT tokens from ${user2.address}`)
 
-  // user2 deposits 5,000 mUSDT
+  // user2 deposits 100,000 mUSDT
   transaction = await exchange.connect(user2).depositToken(mUSDT.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mUSDT tokens from ${user2.address}`)
@@ -220,7 +220,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mwBTC tokens from ${user2.address}`)
 
-  // user2 deposits 5,000 mwBTC
+  // user2 deposits 100,000 mwBTC
   transaction = await exchange.connect(user2).depositToken(mwBTC.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mwBTC tokens from ${user2.address}`)
@@ -230,7 +230,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mUSDC tokens from ${user2.address}`)
 
-  // user2 deposits 5,000 mUSDC
+  // user2 deposits 100,000 mUSDC
   transaction = await exchange.connect(user2).depositToken(mUSDC.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mUSDC tokens from ${user2.address}`)
@@ -240,7 +240,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mBNB tokens from ${user2.address}`)
 
-  // user2 deposits 5,000 mBNB
+  // user2 deposits 100,000 mBNB
   transaction = await exchange.connect(user2).depositToken(mBNB.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mBNB tokens from ${user2.address}`)
@@ -250,7 +250,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mTRX tokens from ${user2.address}`)
 
-  // user2 deposits 5,000 mTRX
+  // user2 deposits 100,000 mTRX
   transaction = await exchange.connect(user2).depositToken(mTRX.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mTRX tokens from ${user2.address}`)
@@ -260,7 +260,7 @@ async function main() {
   await transaction.wait()
   console.log(`Approved ${amount2} mMATIC tokens from ${user2.address}`)
 
-  // user2 deposits 5,000 mMATIC
+  // user2 deposits 100,000 mMATIC
   transaction = await exchange.connect(user2).depositToken(mMATIC.address, amount2)
   await transaction.wait()
   console.log(`Deposited ${amount2} mMATIC tokens from ${user2.address}`)
@@ -270,7 +270,7 @@ async function main() {
 
   // User 1 makes order to get tokens
   let orderId
-  transaction = await exchange.connect(user1).makeOrder(mwETH.address, tokens(100), LDX.address, tokens(5))
+  transaction = await exchange.connect(user1).makeOrder(mwETH.address, tokens(200), LDX.address, tokens(10))
   result = await transaction.wait()
   console.log(`Made order from ${user1.address}`)
 
@@ -287,7 +287,7 @@ async function main() {
   // Seed Filled Orders
 
   // User 1 makes order
-  transaction = await exchange.connect(user1).makeOrder(mwETH.address, tokens (100), LDX.address, tokens(10))
+  transaction = await exchange.connect(user1).makeOrder(mwETH.address, tokens(10), LDX.address, tokens(200))
   result = await transaction.wait()
   console.log(`Made order from ${user1.address}`)
 
@@ -301,7 +301,7 @@ async function main() {
   await wait(1)
 
   // User 1 makes another order
-  transaction = await exchange.connect(user1).makeOrder(mwETH.address, tokens (50), LDX.address, tokens(15))
+  transaction = await exchange.connect(user1).makeOrder(mwETH.address, tokens(15), LDX.address, tokens(305))
   result = await transaction.wait()
   console.log(`Made order from ${user1.address}`)
 
@@ -315,7 +315,7 @@ async function main() {
   await wait(1)
 
   // User 1 makes final order
-  transaction = await exchange.connect(user1).makeOrder(mwETH.address, tokens (200), LDX.address, tokens(20))
+  transaction = await exchange.connect(user1).makeOrder(mwETH.address, tokens(20), LDX.address, tokens(395))
   result = await transaction.wait()
   console.log(`Made order from ${user1.address}`)
 
@@ -333,7 +333,7 @@ async function main() {
 
   // User 1 makes 10 orders (LDX/mwETH)
   for(let i = 1; i <= 10; i++) {
-    transaction = await exchange.connect(user1).makeOrder(mwETH.address, tokens (10 + i), LDX.address, tokens(10))
+    transaction = await exchange.connect(user1).makeOrder(mwETH.address, tokens(10 + i), LDX.address, tokens(200))
     result = await transaction.wait()
 
     console.log(`Made order from ${user1.address}`)
@@ -344,7 +344,7 @@ async function main() {
 
   // User 2 makes 10 orders (LDX/mwETH)
   for(let i = 1; i <= 10; i++) {
-    transaction = await exchange.connect(user2).makeOrder(LDX.address, tokens (10), mwETH.address, tokens(10 + i))
+    transaction = await exchange.connect(user2).makeOrder(LDX.address, tokens(200), mwETH.address, tokens(10 - i / 2))
     result = await transaction.wait()
 
     console.log(`Made order from ${user2.address}`)
@@ -355,7 +355,7 @@ async function main() {
 
   // User 1 makes 10 orders (LDX/mUSDT)
   for(let i = 1; i <= 10; i++) {
-    transaction = await exchange.connect(user1).makeOrder(mUSDT.address, tokens (25 + (2 * i)), LDX.address, tokens(10))
+    transaction = await exchange.connect(user1).makeOrder(mUSDT.address, tokens(100 + i), LDX.address, tokens(1))
     result = await transaction.wait()
 
     console.log(`Made order from ${user1.address}`)
@@ -366,7 +366,183 @@ async function main() {
 
   // User 2 makes 10 orders (LDX/mUSDT)
   for(let i = 1; i <= 10; i++) {
-    transaction = await exchange.connect(user2).makeOrder(LDX.address, tokens (10), mUSDT.address, tokens(25 + (2 * i)))
+    transaction = await exchange.connect(user2).makeOrder(LDX.address, tokens(1), mUSDT.address, tokens(100 - i))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user2.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 1 makes 10 orders (LDX/mwBTC)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user1).makeOrder(mwBTC.address, tokens(0.5 + 0.001 * i), LDX.address, tokens(150))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user1.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 2 makes 10 orders (LDX/mwBTC)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user2).makeOrder(LDX.address, tokens(150), mwBTC.address, tokens(0.5 - 0.001 * i))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user2.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 1 makes 10 orders (mwETH/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user1).makeOrder(mUSDT.address, tokens(2000 + i), mwETH.address, tokens(1))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user1.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 2 makes 10 orders (mwETH/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user2).makeOrder(mwETH.address, tokens(1), mUSDT.address, tokens(2000 - i))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user2.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 1 makes 10 orders (mDAI/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user1).makeOrder(mUSDT.address, tokens(1 + 0.001 * i), mDAI.address, tokens(1))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user1.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 2 makes 10 orders (mDAI/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user2).makeOrder(mDAI.address, tokens(1), mUSDT.address, tokens(1 - 0.001 * i))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user2.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 1 makes 10 orders (mwBTC/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user1).makeOrder(mUSDT.address, tokens(30000 + 10 * i), mwBTC.address, tokens(1))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user1.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 2 makes 10 orders (mwBTC/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user2).makeOrder(mwBTC.address, tokens(1), mUSDT.address, tokens(30000 - 10 * i))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user2.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 1 makes 10 orders (mUSDC/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user1).makeOrder(mUSDT.address, tokens(1 + 0.001 * i), mUSDC.address, tokens(1))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user1.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 2 makes 10 orders (mUSDC/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user2).makeOrder(mUSDC.address, tokens(1), mUSDT.address, tokens(1 - 0.001 * i))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user2.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 1 makes 10 orders (mBNB/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user1).makeOrder(mUSDT.address, tokens(250 + i), mBNB.address, tokens(1))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user1.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 2 makes 10 orders (mBNB/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user2).makeOrder(mBNB.address, tokens(1), mUSDT.address, tokens(250 - i))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user2.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 1 makes 10 orders (mTRX/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user1).makeOrder(mUSDT.address, tokens(0.08 + 0.0001 * i), mTRX.address, tokens(1))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user1.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 2 makes 10 orders (mTRX/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user2).makeOrder(mTRX.address, tokens(1), mUSDT.address, tokens(0.08 - 0.0001 * i))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user2.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 1 makes 10 orders (mMATIC/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user1).makeOrder(mUSDT.address, tokens(0.75 + 0.001 * i), mMATIC.address, tokens(1))
+    result = await transaction.wait()
+
+    console.log(`Made order from ${user1.address}`)
+
+  // Wait 1 second
+  await wait(1)
+  }
+
+  // User 2 makes 10 orders (mMATIC/mUSDT)
+  for(let i = 1; i <= 10; i++) {
+    transaction = await exchange.connect(user2).makeOrder(mMATIC.address, tokens(1), mUSDT.address, tokens(0.75 - 0.001 * i))
     result = await transaction.wait()
 
     console.log(`Made order from ${user2.address}`)

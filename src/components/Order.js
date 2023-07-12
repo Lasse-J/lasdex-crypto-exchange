@@ -11,6 +11,7 @@ const Order = () => {
   const provider = useSelector(state => state.provider.connection)
   const tokens = useSelector(state => state.tokens.contracts)
   const exchange = useSelector(state => state.exchange.contract)
+  const symbols = useSelector(state => state.tokens.symbols)
 
   const dispatch = useDispatch()
 
@@ -56,9 +57,9 @@ const Order = () => {
       <form onSubmit={isBuy ? buyHandler : sellHandler }>
 
         {isBuy ? (
-          <label htmlFor="amount">Buy Amount</label>
+          <label htmlFor="amount">Buy Amount {symbols && symbols[0]}</label>
         ) : (
-          <label htmlFor="amount">Sell Amount</label>
+          <label htmlFor="amount">Sell Amount {symbols && symbols[0]}</label>
         )}
 
         <input

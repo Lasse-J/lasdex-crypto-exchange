@@ -1,4 +1,4 @@
-import { createSelector } from 'reselect';
+import { createSelector } from 'reselect'
 import { get, groupBy, reject, maxBy, minBy } from 'lodash';
 import moment from 'moment'
 import { ethers } from 'ethers';
@@ -8,6 +8,7 @@ const RED = '#F45353'
 
 const account = state => get(state, 'provider.account')
 const tokens = state => get(state, 'tokens.contracts')
+const events = state => get(state, 'exchange.events')
 
 const allOrders = state => get(state, 'exchange.allOrders.data', [])
 const cancelledOrders = state => get(state, 'exchange.cancelledOrders.data', [])
@@ -26,6 +27,19 @@ const openOrders = state => {
 
 	return openOrders
 }
+
+// -----------------------------------------------
+// MY EVENTS
+
+export const myEventsSelector = createSelector(
+	account,
+	events,
+	(account, events) => {
+		events = events.filter((e) => e.args.user === account)
+		console.log(events)
+		return events
+	}
+)
 
 // ---------------------------------------------
 // MY OPEN ORDERS
@@ -87,8 +101,8 @@ const decorateOrder = (order, tokens) => {
 
 	// Calculate token price to 5 decimal places
 	const precision = 100000
-	let tokenPrice = (token0Amount / token1Amount)
-	tokenPrice = Math.round(tokenPrice * precision) / precision
+	let tokenPrice = (token1Amount / token0Amount)  // changed from: (token0Amount / token1Amount)
+	tokenPrice = Math.round(1 / tokenPrice * precision) / precision
 
 	return ({
 		...order,
@@ -287,7 +301,7 @@ export const priceChartSelector = createSelector(
 	filledOrders,
 	tokens,
 	(orders, tokens) => {
-		if (!tokens[0] || !tokens[1]) { return }
+		if (!tokens[0] || !tokens[1]) {return}
 
 		// Filter orders by selected tokens
 		orders = orders.filter((o) => o.tokenGet === tokens[0].address || o.tokenGet === tokens[1].address)

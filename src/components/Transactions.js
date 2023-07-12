@@ -54,8 +54,8 @@ const Transactions = () => {
             <table>
               <thead>
                 <tr>
-                  <th>{symbols && symbols[0]}<img src={sort} alt="Sort" /></th>
                   <th>{symbols && symbols[0]}/{symbols && symbols[1]}<img src={sort} alt="Sort" /></th>
+                  <th>{symbols && symbols[0]}<img src={sort} alt="Sort" /></th>
                   <th></th>
                 </tr>
               </thead>
@@ -64,8 +64,8 @@ const Transactions = () => {
                 {myOpenOrders && myOpenOrders.map((order, index) => {
                   return(
                     <tr key={index}>
-                      <td style={{ color: `${order.orderTypeClass}` }}>{order.token0Amount}</td>
                       <td>{order.tokenPrice}</td>
+                      <td style={{ color: `${order.orderTypeClass}` }}>{order.token1Amount}</td>
                       <td><button className='button--sm' onClick={() => cancelHandler(order)}>Cancel</button></td>
                     </tr>
                   )
@@ -89,8 +89,8 @@ const Transactions = () => {
             <thead>
               <tr>
                 <th>Time<img src={sort} alt="Sort" /></th>
-                <th>{symbols && symbols[0]}<img src={sort} alt="Sort" /></th>
                 <th>{symbols && symbols[0]}/{symbols && symbols[1]}<img src={sort} alt="Sort" /></th>
+                <th>{symbols && symbols[0]}<img src={sort} alt="Sort" /></th>
               </tr>
             </thead>
             <tbody>
@@ -99,8 +99,8 @@ const Transactions = () => {
                 return(
                 <tr key={index}>
                   <td>{order.formattedTimestamp}</td>
-                  <td style={{ color: `${order.orderClass}` }}>{order.orderSign}{order.token0Amount}</td>
                   <td>{order.tokenPrice}</td>
+                  <td style={{ color: `${order.orderClass}` }}>{order.orderSign}{order.token1Amount}</td>
                 </tr>
                 )
               })}              
