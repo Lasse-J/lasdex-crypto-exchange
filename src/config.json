@@ -33,6 +33,36 @@
   		"explorerURL": "#"
   	},
   	"5": {
+  		"exchange": {
+  			"address": "0xF4C36B080bE2c52A7d29855D1Ec27049EB18b0aF"
+  		},
+  	 	"LDX": {
+  			"address": "0x4b1E507E0EA275130D0641e79bEaF7B85fe67308"
+  		},
+  	 	"mwETH": {
+  			"address": "0xA66e604EA4eb63861c3908611d7A4d982D371b8B"
+  		},
+  	 	"mDAI": {
+  			"address": "0xed22151989f1031bc3F7c352A8c64ecE62717Cd1"
+  		},
+  	 	"mUSDT": {
+  			"address": "0x6a2417Fbc66cFB54d253F30D1B698fdd49811704"
+  		},
+  	 	"mwBTC": {
+  			"address": "0x44f8583D5BE828aa406575A213AB40D53D58411D"
+  		},
+  	 	"mUSDC": {
+  			"address": "0x2689E14C3B15695EEBf650e8a8C555bBe1b451ac"
+  		},
+  	 	"mBNB": {
+  			"address": "0xB9228e5d1d06adfEA295A8c2fdE7d14d482BBF45"
+  		},
+  	 	"mTRX": {
+  			"address": "0x944106258D493E9EE1EB4dFCA5d4423406d49586"
+  		},
+  	 	"mMATIC": {
+  			"address": "0x482DC96134847218a2F84AdfE45284EaC0E2ab87"
+  		},
  		"explorerURL": "https://goerli.etherscan.io/"		
   	}
 }
