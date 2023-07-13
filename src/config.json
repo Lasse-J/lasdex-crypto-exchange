@@ -64,5 +64,38 @@
   			"address": "0x482DC96134847218a2F84AdfE45284EaC0E2ab87"
   		},
  		"explorerURL": "https://goerli.etherscan.io/"		
+  	},
+  	"80001": {
+  		"exchange": {
+  			"address": "0xB9228e5d1d06adfEA295A8c2fdE7d14d482BBF45"
+  		},
+  	 	"LDX": {
+  			"address": "0x798f6C576a440B717939BB4Dde77F5F1F6684836"
+  		},
+  	 	"mwETH": {
+  			"address": "0xC9499a98F8Bfe44dbe68097D8112Dd63e056bb53"
+  		},
+  	 	"mDAI": {
+  			"address": "0x9A48168C71D625475b144B5d14e26A043446D301"
+  		},
+  	 	"mUSDT": {
+  			"address": "0x4b1E507E0EA275130D0641e79bEaF7B85fe67308"
+  		},
+  	 	"mwBTC": {
+  			"address": "0xA66e604EA4eb63861c3908611d7A4d982D371b8B"
+  		},
+  	 	"mUSDC": {
+  			"address": "0xed22151989f1031bc3F7c352A8c64ecE62717Cd1"
+  		},
+  	 	"mBNB": {
+  			"address": "0x6a2417Fbc66cFB54d253F30D1B698fdd49811704"
+  		},
+  	 	"mTRX": {
+  			"address": "0x44f8583D5BE828aa406575A213AB40D53D58411D"
+  		},
+  	 	"mMATIC": {
+  			"address": "0x2689E14C3B15695EEBf650e8a8C555bBe1b451ac"
+  		},
+ 		"explorerURL": "https://mumbai.polygonscan.com/"		
   	}
 }
